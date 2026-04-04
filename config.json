@@ -1,56 +1,83 @@
 {
   "ascii": [
-    "███████╗██╗  ██╗███████╗██╗     ██╗",
-    "██╔════╝██║  ██║██╔════╝██║     ██║",
-    "███████╗███████║█████╗  ██║     ██║",
-    "╚════██║██╔══██║██╔══╝  ██║     ██║",
-    "███████║██║  ██║███████╗███████╗███████╗",
-    "╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝"
+    "███╗   ███╗██╗██╗  ██╗███████╗",
+    "████╗ ████║██║██║ ██╔╝██╔════╝",
+    "██╔████╔██║██║█████╔╝ █████╗  ",
+    "██║╚██╔╝██║██║██╔═██╗ ██╔══╝  ",
+    "██║ ╚═╝ ██║██║██║  ██╗███████╗",
+    "╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚══════╝",
+    "",
+    "███████╗██╗███████╗██╗  ██╗███████╗██████╗ ",
+    "██╔════╝██║██╔════╝██║  ██║██╔════╝██╔══██╗",
+    "█████╗  ██║███████╗███████║█████╗  ██████╔╝",
+    "██╔══╝  ██║╚════██║██╔══██║██╔══╝  ██╔══██╗",
+    "██║     ██║███████║██║  ██║███████╗██║  ██║",
+    "╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝"
   ],
-  "title": "WebShell",
+  "title": "Mike Fisher",
   "username": "visitor",
-  "hostname": "webshell",
+  "hostname": "mikefisher.dev",
   "password": "050823",
-  "repoLink": "https://github.com/nasan016/webshell",
+  "repoLink": "https://github.com/mikecfisher/webshell",
   "social": {
-    "email": "your@email.com",
-    "github": "yourgithub",
-    "linkedin": "you"
+    "email": "mikefisher84@gmail.com",
+    "github": "mikecfisher",
+    "linkedin": "mikefisher-dev"
   },
-  "aboutGreeting": "Hi stranger. Welcome to WebShell.",
+  "aboutGreeting": "Hey there. I'm Mike Fisher — staff software engineer based in Brooklyn, NY.",
   "projects": [
     [
-      "GofeR",
-      "Vue.js reactivity in Go.",
-      "https://github.com/nasan016/gofer"
+      "Listium",
+      "Offline-first event ops platform for venues & festivals.",
+      "https://listium.app"
     ],
     [
-      "WebShell",
-      "Terminal styled website.",
-      "https://github.com/nasan016/webshell"
+      "claude-debug-mode",
+      "Hypothesis-driven debugging plugin for Claude Code.",
+      "https://github.com/mikecfisher/claude-debug-mode"
+    ],
+    [
+      "Glance",
+      "Chrome extension — AI video summaries via Claude API.",
+      "https://github.com/mikecfisher/glance"
+    ],
+    [
+      "fish-tree",
+      "TUI for managing git worktrees.",
+      "https://github.com/mikecfisher/fish-tree"
+    ],
+    [
+      "tuicr",
+      "Human-in-the-loop code review TUI (Rust).",
+      "https://github.com/mikecfisher/tuicr"
+    ],
+    [
+      "critique",
+      "TUI for reviewing git changes.",
+      "https://github.com/mikecfisher/critique"
     ]
   ],
   "colors": {
-    "background": "#0C0623",
-    "foreground": "#F8DDE5",
-    "banner": "#FF9951",
+    "background": "#1e1e2e",
+    "foreground": "#cdd6f4",
+    "banner": "#fab387",
     "border": {
       "visible": true,
-      "color": "#FFADE2"
+      "color": "#f5c2e7"
     },
     "prompt": {
-      "default": "#A5A7A7",
-      "user": "#FE6BC9",
-      "host": "#70FDFF",
-      "input": "#FF7685"
+      "default": "#a6adc8",
+      "user": "#f5c2e7",
+      "host": "#89dceb",
+      "input": "#f38ba8"
     },
     "link": {
-      "text": "#B6AAEE",
-      "highlightColor": "#FFADE2",
-      "highlightText": "#0C0623"
+      "text": "#b4befe",
+      "highlightColor": "#cba6f7",
+      "highlightText": "#1e1e2e"
     },
     "commands": {
-      "textColor": "#FD9BDB"
+      "textColor": "#f5c2e7"
     }
   }
 }
