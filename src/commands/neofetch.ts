@@ -32,12 +32,9 @@ const createNeofetch = (): string[] => {
 	];
 
 	const info2 = [
-		`<span class='neofetch-label'>Editor:</span>${SPACE.repeat(3)}<span class='neofetch-value'>Neovim + Claude Code</span>`,
+		`<span class='neofetch-label'>Editor:</span>${SPACE.repeat(3)}<span class='neofetch-value'>Neovim</span>`,
 		`<span class='neofetch-label'>OS:</span>${SPACE.repeat(7)}<span class='neofetch-value'>macOS</span>`,
 		`<span class='neofetch-label'>Languages:</span>${SPACE}<span class='neofetch-value'>TS, JS, Python, Rust, Go</span>`,
-		`<span class='neofetch-label'>Clients:</span>${SPACE.repeat(2)}<span class='neofetch-value'>Disney+, Walmart, Mastercard</span>`,
-		`<span class='neofetch-label'>Scaling:</span>${SPACE.repeat(2)}<span class='neofetch-value'>150M+ users (Disney+)</span>`,
-		`<span class='neofetch-label'>Side:</span>${SPACE.repeat(5)}<span class='neofetch-value'>Music producer & event ops</span>`,
 		"",
 		`<span style='color:#f38ba8'>●</span> <span style='color:#fab387'>●</span> <span style='color:#f9e2af'>●</span> <span style='color:#a6e3a1'>●</span> <span style='color:#89dceb'>●</span> <span style='color:#cba6f7'>●</span> <span style='color:#f5c2e7'>●</span> <span style='color:#b4befe'>●</span>`,
 	];

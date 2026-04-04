@@ -14,6 +14,17 @@ import {
 	createThemeList,
 	THEME_NAMES,
 } from "./commands/theme";
+import {
+	SUDO_CAT_ENV,
+	SUDO_CAT_SECRET,
+	SUDO_CAT_SSH,
+	SUDO_GIT_LOG,
+	SUDO_HISTORY,
+	SUDO_LS,
+	SUDO_MAN_MIKE,
+	SUDO_PWD,
+	SUDO_TOP,
+} from "./commands/sudo";
 import { createWhoami } from "./commands/whoami";
 
 //mutWriteLines gets deleted and reassigned
@@ -379,7 +390,66 @@ function commandHandler(input: string) {
 			}
 
 			if (isSudo) {
-				writeLines(["src", "<br>"]);
+				writeLines(SUDO_LS);
+			} else {
+				writeLines(["Permission not granted.", "<br>"]);
+			}
+			break;
+		case "cat .env":
+			if (isSudo) {
+				writeLines(SUDO_CAT_ENV);
+			} else {
+				writeLines(["Permission not granted.", "<br>"]);
+			}
+			break;
+		case "cat ~/.ssh/id_rsa":
+		case "cat id_rsa":
+			if (isSudo) {
+				writeLines(SUDO_CAT_SSH);
+			} else {
+				writeLines(["Permission not granted.", "<br>"]);
+			}
+			break;
+		case "cat secret.txt":
+		case "cat secret":
+			if (isSudo) {
+				writeLines(SUDO_CAT_SECRET);
+			} else {
+				writeLines(["Permission not granted.", "<br>"]);
+			}
+			break;
+		case "pwd":
+			if (isSudo) {
+				writeLines(SUDO_PWD);
+			} else {
+				writeLines(["Permission not granted.", "<br>"]);
+			}
+			break;
+		case "top":
+		case "htop":
+			if (isSudo) {
+				writeLines(SUDO_TOP);
+			} else {
+				writeLines(["Permission not granted.", "<br>"]);
+			}
+			break;
+		case "history":
+			if (isSudo) {
+				writeLines(SUDO_HISTORY);
+			} else {
+				writeLines(["Permission not granted.", "<br>"]);
+			}
+			break;
+		case "git log":
+			if (isSudo) {
+				writeLines(SUDO_GIT_LOG);
+			} else {
+				writeLines(["Permission not granted.", "<br>"]);
+			}
+			break;
+		case "man mike":
+			if (isSudo) {
+				writeLines(SUDO_MAN_MIKE);
 			} else {
 				writeLines(["Permission not granted.", "<br>"]);
 			}
@@ -442,8 +512,17 @@ function passwordHandler() {
 		if (!mutWriteLines || !mutWriteLines.parentNode) return;
 		writeLines([
 			"<br>",
-			"PERMISSION GRANTED.",
-			"Try <span class='command'>'rm -rf'</span>",
+			"PERMISSION GRANTED. I hope you know what you're doing.",
+			"<br>",
+			"&nbsp;&nbsp;<span class='command'>'ls'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List files",
+			"&nbsp;&nbsp;<span class='command'>'cat .env'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Environment variables",
+			"&nbsp;&nbsp;<span class='command'>'cat secret.txt'</span>&nbsp;&nbsp;&nbsp;The real stuff",
+			"&nbsp;&nbsp;<span class='command'>'top'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Running processes",
+			"&nbsp;&nbsp;<span class='command'>'history'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Command history",
+			"&nbsp;&nbsp;<span class='command'>'git log'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recent commits",
+			"&nbsp;&nbsp;<span class='command'>'man mike'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read the manual",
+			"&nbsp;&nbsp;<span class='command'>'pwd'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Where am I?",
+			"&nbsp;&nbsp;<span class='command'>'rm -rf'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Don't you dare.",
 			"<br>",
 		]);
 		revertPasswordChanges();

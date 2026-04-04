@@ -17,12 +17,14 @@
   "title": "Mike Fisher",
   "username": "visitor",
   "hostname": "mikefisher.dev",
-  "password": "050823",
+  "password": "password",
   "repoLink": "https://github.com/mikecfisher/webshell",
   "social": {
     "email": "mikefisher84@gmail.com",
     "github": "mikecfisher",
-    "linkedin": "mikefisher-dev"
+    "linkedin": "mikefisher-dev",
+    "twitter": "mikecfisher",
+    "substack": "mikecfisher"
   },
   "aboutGreeting": "Hey there. I'm Mike Fisher — staff software engineer based in Brooklyn, NY.",
   "projects": [

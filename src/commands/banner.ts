@@ -19,6 +19,10 @@ const createBanner = (): string[] => {
 	banner.push("<br>");
 	banner.push("Staff Software Engineer • Brooklyn, NY • 13+ years");
 	banner.push(
+		"<a href='https://github.com/mikecfisher' target='_blank'>github</a> • <a href='https://linkedin.com/in/mikefisher-dev' target='_blank'>linkedin</a> • <a href='https://x.com/mikecfisher' target='_blank'>x/twitter</a> • <a href='https://mikecfisher.substack.com' target='_blank'>substack</a>",
+	);
+	banner.push("<br>");
+	banner.push(
 		"Type <span class='command'>'help'</span> for a list of all available commands.",
 	);
 	banner.push(

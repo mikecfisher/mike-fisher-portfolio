@@ -31,6 +31,12 @@ const createResume = (): string[] => {
 			SPACE.repeat(3) +
 			"<a href='https://linkedin.com/in/mikefisher-dev' target='_blank'>linkedin/mikefisher-dev</a>",
 	);
+	r.push(
+		SPACE.repeat(2) +
+			"<a href='https://x.com/mikecfisher' target='_blank'>x/mikecfisher</a>" +
+			SPACE.repeat(3) +
+			"<a href='https://mikecfisher.substack.com' target='_blank'>mikecfisher.substack.com</a>",
+	);
 	r.push("<br>");
 
 	// Summary
