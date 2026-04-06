@@ -8,6 +8,7 @@ import { NEOFETCH } from "./commands/neofetch";
 import { PROJECTS } from "./commands/projects";
 import { RESUME } from "./commands/resume";
 import { SKILLS } from "./commands/skills";
+import { startSnake } from "./commands/snake";
 import {
 	applyTheme,
 	createThemeApplied,
@@ -36,6 +37,7 @@ let isSudo = false;
 let isPasswordInput = false;
 let passwordCounter = 0;
 let bareMode = false;
+let gameMode = false;
 
 //WRITELINESCOPY is used to during the "clear" command
 const WRITELINESCOPY = mutWriteLines;
@@ -64,6 +66,7 @@ const COMMANDS = [
 	"repo",
 	"banner",
 	"clear",
+	"snake",
 	"sudo",
 ];
 const HISTORY: string[] = [];
@@ -78,6 +81,7 @@ const scrollToBottom = () => {
 };
 
 function userInputHandler(e: KeyboardEvent) {
+	if (gameMode) return;
 	const key = e.key;
 
 	switch (key) {
@@ -454,6 +458,29 @@ function commandHandler(input: string) {
 				writeLines(["Permission not granted.", "<br>"]);
 			}
 			break;
+		case "snake":
+			if (bareMode) {
+				writeLines(["the games got deleted too.", "<br>"]);
+				break;
+			}
+			gameMode = true;
+			if (INPUT_HIDDEN) INPUT_HIDDEN.style.display = "none";
+			USERINPUT.blur();
+
+			startSnake(TERMINAL!, mutWriteLines!, {
+				onExit: (finalScore: number) => {
+					gameMode = false;
+					if (INPUT_HIDDEN) INPUT_HIDDEN.style.display = "block";
+					USERINPUT.focus();
+					writeLines([
+						"<br>",
+						`<span class='section-header'>Snake</span> — Final Score: <span class='command'>${finalScore}</span>`,
+						"<br>",
+					]);
+					scrollToBottom();
+				},
+			});
+			break;
 		default:
 			if (bareMode) {
 				writeLines(["type 'help'", "<br>"]);
@@ -588,7 +615,7 @@ const initEventListeners = () => {
 	PASSWORD_INPUT.addEventListener("keypress", userInputHandler);
 
 	window.addEventListener("click", () => {
-		USERINPUT.focus();
+		if (!gameMode) USERINPUT.focus();
 	});
 };
 

@@ -10,6 +10,7 @@ const helpObj = {
 		["'whoami'", "A perplexing question."],
 		["'repo'", "View this site's source code."],
 		["'banner'", "Display the banner."],
+		["'snake'", "Play Snake in the terminal."],
 		["'clear'", "Clear the terminal."],
 		["'sudo'", "???"],
 	],
