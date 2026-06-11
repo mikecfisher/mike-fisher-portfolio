@@ -1,86 +1,34 @@
-# [WebShell | Terminal Portfolio Website](https://webshellx.vercel.app/)
+# Mike Fisher Portfolio
 
-<div align="center">
-  <img alt="banner" src="https://raw.githubusercontent.com/nasan016/webshell/main/res/banner.png">
-</div>
+Terminal-style personal portfolio site for Mike Fisher. The app presents profile information, links, and selected projects through a web-shell interface with command history and autocomplete.
 
-![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
-![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+## What it does
 
-Create your own terminal styled website! Check out [term.nasan.dev](https://term.nasan.dev/) for an example.
+- Renders a configurable terminal UI from `config.json`.
+- Shows Mike's social links, bio greeting, and selected projects.
+- Supports terminal-style keyboard interactions such as tab completion, escape-to-clear, and command history navigation.
+- Builds to a static Vite site suitable for simple hosting.
 
-## Features
-* **[Tab]** for auto completion.
-* **[Esc]** to clear the input line.
-* **[↑][↓]** to scroll through your command history.
+## Stack
 
-## ???
-<div align="center">
-  <img alt="banner" src="https://raw.githubusercontent.com/nasan016/webshell/main/res/secret.png">
-</div>
-How did we get here?
+- Vite
+- TypeScript
+- HTML/CSS generated from TypeScript modules
+- js-yaml for configuration/data parsing
+- Biome for linting/formatting
 
-## Configuration
+## Getting started
 
-Most of the configuration is done in the `config.json` file.
-
-```json
-{
-  "ascii": [
-    "██████╗ ██╗   ██╗ ██████╗",
-    "██╔══██╗██║   ██║██╔════╝",
-    "██║  ██║██║   ██║██║  ███╗",
-    "██║  ██║██║   ██║██║   ██║",
-    "██████╔╝╚██████╔╝╚██████╔╝",
-    "╚═════╝  ╚═════╝  ╚═════╝",
-  ],
-  "title": "Dug's Terminal",
-  "username": "guest",
-  "hostname": "dug.dev",
-  "password": "squirrel",
-  "repoLink": "https://github.com/nasan016/webshell",
-  "social": {
-    "email": "dug@pixar.com",
-    "github": "dugfromup",
-    "linkedin": "dugthedog"
-  },
-  "aboutGreeting": "My name is Dug. I have just met you.",
-  "projects": [
-    [
-      "Project Name",
-      "Project Description",
-      "Project Link"
-    ],
-    [
-      "Another Project Name",
-      "Another Project Description",
-      "Another Project Link"
-    ]
-  ],
-  "colors": {
-      ...
-  }
-}
-```
-
-## Run the Project Locally:
-
-Clone the repository
-```shell
-git clone https://github.com/nasan016/webshell.git
-```
-Go to the project directory
-```shell
-cd webshell
-```
-Install the dependencies
-```shell
+```bash
 npm install
-```
-Start the server
-```shell
 npm run dev
+```
+
+Useful scripts:
+
+```bash
+npm run build
+npm run preview
+npm run lint
+npm run format
 ```
